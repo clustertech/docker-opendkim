@@ -7,4 +7,4 @@ sed -i 's/^KeyFile/# KeyFile/' /etc/opendkim.conf; \
 mv /etc/opendkim.conf /etc/opendkim/opendkim.conf; \
 mkdir /etc/opendkim-keys
 COPY . /
-CMD /startopendkim.sh
+ENTRYPOINT ["/startopendkim.sh"]
